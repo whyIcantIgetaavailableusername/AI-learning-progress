@@ -13,7 +13,6 @@ with co3:
 if b==0 and problem == ':':
     st.write("you can't divide anything by zero")
 else:
-  pans = st.number_input('Write ur answer')
   possible_ans = (a+b,a-b,a*b,c)
   pro = ('\+','\-','x',':')
   for n,i in zip(possible_ans,pro):
@@ -21,10 +20,7 @@ else:
           ans = n
           if n == c:
               ans = a/b
-  if st.button('check'):
-      if ans == pans:
-          st.write('correct')
-      else:
-          st.write('wrong, you dumb idiot, the real answer is', ans)
+  if st.button('check answer'):
+      st.write('the answer is', ans)
 
 
